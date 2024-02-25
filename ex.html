@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>AUTHENTIFICATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="ex.css" rel="stylesheet">
+</head>
+<body>
+  <div class="login-box">
+    <div class="form">
+      <form class="login-form" onsubmit="return authenticate()">
+        <input type="text" id="username" placeholder="username"/>
+        <input type="password" id="password" placeholder="password"/>
+        <button type="submit">login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function authenticate() {
+      // Récupération des valeurs saisies par l'utilisateur
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Récupération des données enregistrées dans le LocalStorage
+      var savedUsername = localStorage.getItem('username');
+      var savedPassword = localStorage.getItem('password');
+      // Stockage des données dans le localStorage (peut être placé dans une autre partie de votre application)
+ localStorage.setItem('username', 'ayman');
+ localStorage.setItem('password', '12345');
+
+      // Vérification des informations d'authentification
+      if (username === savedUsername && password === savedPassword) {
+        // Authentification réussie
+        alert('Authentification réussie!');
+        // Redirection vers la page suivante
+        window.location.href = 'formulaire.html';
+        return false; // Empêche le formulaire de se soumettre
+      } else {
+        // Informations d'authentification incorrectes
+        alert('Nom d\'utilisateur ou mot de passe incorrect!');
+        return false; // Empêche le formulaire de se soumettre
+      }
+    }
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html> 
+<head>
+  <meta charset="UTF-8">
+  <title>Mon CV</title>
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+  <div id="cv">
+    <div class="header">
+          </div>
+    <div class="container">
+        <div class="photo"><br><br>
+          <img src="#" alt="photo">
+        </div>
+        <h1>Informations personnelles</h1>
+    <div class="section">
+      <ul><p> First Name:<span contenteditable="true"> cliquer ici pour modifier</span></p></ul>
+      <ul><p>Last Name: <span contenteditable="true">cliquer ici pour modifier</span></p></ul>
+     <ul> <p>Email: <span contenteditable="true">cliquer ici pour modifier</span></p></ul>
+     <ul> <p>Phone Number: <span contenteditable="true">cliquer ici pour modifier</span></p></ul>
+    </div>
+    <div class="section">
+      <h1>Compétences</h1>
+      <ul> 
+        <p contenteditable="true"> <span contenteditable="true">cliquer ici pour modifier</span><br><br>
+            cliquer ici pour modifier<br><br>
+            cliquer ici pour modifier<br><br>
+            cliquer ici pour modifier <br><br>
+            cliquer ici pour modifier
+        </p> 
+        <h1>Cursus</h1>
+        <p contenteditable="true"><span contenteditable="true">cliquer ici pour modifier</span><br><br>
+            <span contenteditable="true">cliquer ici pour modifier</span></p> <br>
+           <p> <span contenteditable="true">cliquer ici pour modifier</span> </p>
+            <h1>
+                LANGUES 
+            </h1>
+            <p contenteditable="true">
+                cliquer ici pour modifier<br><br>
+            cliquer ici pour modifier <br><br>
+            cliquer ici pour modifier
+            </p>
+        </ul>
+    </div>
+    <div class="section">
+      <h1>loisirs</h1>
+      <ul>
+        <p contenteditable="true">cliquer ici pour modifier
+        </p><br>
+        <p contenteditable="true">cliquer ici pour modifier</p>
+      </ul>
+    </div>
+    <div class="download">
+     <button> <img src="download_icon.png" alt="Download CV" id="downloadButton">
+     </div></button>  
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+      document.getElementById('downloadButton').addEventListener('click', function() {
+        const element = document.getElementById('cv');
+        html2pdf().from(element).save('CV.pdf');
+      });
+    </script>
+</body>
+</html>
